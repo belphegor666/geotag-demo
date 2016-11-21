@@ -1,0 +1,53 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Geotag File Upload</title>
+  <meta name="description" content="Geotag File Upload Demo">
+  <meta name="author" content="Tim Robinson">
+
+  <script src="js/exif.js"></script>
+  <script src="js/binaryajax.js"></script>
+  <script src="js/main.js"></script>
+
+  <link rel="stylesheet" href="/css/main.css">
+
+</head>
+<body>
+    <table border="1">
+    <tr>
+        <td>
+            <div>
+                <input id="files" type=file accept="image/*;capture=camera"/>
+            </div>
+            <div>
+                <button id="upload" onclick="upload()">Upload</button>
+            </div>
+            <div>
+                <input id="lat" type="text" disabled=true/>
+            </div>
+            <div>
+                <input id="lon" type="text" disabled=true/>
+            </div>
+            <div>
+                <textarea id="geodata" rows=50 cols=30></textarea>
+            </div>
+        </td>
+        <td>
+        <td width="400px" height="400px" valign="top">
+            <div id="map" style="width:100%; height:100%">
+                <p>foo</p>
+            </div>
+            
+        </td>
+    </tr>
+    </table>
+
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoH3zSsBoDQBp5TbLPtyutsosfhsJUXdc&callback=initMap">
+    </script>
+         
+</body>
+</html>
